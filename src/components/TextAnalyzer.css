@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 98%;
     font-family: Arial, sans-serif;
   }
   
@@ -15,15 +15,15 @@
   }
   
   .description {
-    width: 100%;
-    height: auto; /* Adjusted for responsiveness */
+    width: 97%;
+    height: auto;
     font-size: 32px;
     font-weight: 400;
     line-height: 38px;
     letter-spacing: 0em;
     text-align: left;
-    margin-left: 15px; /* Adjusted for responsiveness */
-    margin-right: 15px; /* Adjusted for responsiveness */
+    margin-left: 60px;
+    margin-right: 15px;
     color: #475467;
   }
   
@@ -43,27 +43,85 @@
   
   .input-field {
     width: 90%;
-    height: 200px; /* Adjusted for responsiveness */
+    height: 200px;
     padding: 10px;
     font-size: 16px;
     outline: none;
     border: 1px solid #D2D6DB;
     box-shadow: 0px 1px 2px 0px #1018280D;
+    margin-top: 25px;
+  }
+  .input-field1 {
+    margin-top: 25px;
+    margin-left: 70px;
+    width: 82%;
+    height: 18px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #D2D6DB;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
   }
   
-  .stats-table {
-    margin-left: 15px; /* Adjusted for responsiveness */
-    margin-right: 15px; /* Adjusted for responsiveness */
-    margin-top: 20px;
+  .process {
+    width: 11%;
+    height: 40px;
+    font-size: 15px;
+    color: #FFFFFF;
+    background: #731EE2;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 25px;
+  }
+  .input1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .switching{
+    margin-top: 10px;
+    height: 40px;
+    margin-left: 70px;
+    width: 90%;
+  }
+  .switch-used{
+    width: 50%;
+  }
+  .switch1, .switch2{
+    border: 0px;
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #333333;
+
+  }
+  .switch1.selected-tab,
+.switch2.selected-tab {
+  font-weight: bold;
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+  .stats-table, .stats-table2 {
+    margin-left: 70px;
+    margin-right: 15px;
+    margin-top: 25px;
   }
   
   table {
-    width: 100%;
+    width: 96%;
     border-collapse: collapse;
   }
   
   th, td {
     border-width: 0px, 0px, 1px, 1px;
+    border-style: solid;
+    border-color: #EAECF0;
+    border: 1px solid lightgray;
     border-style: solid;
     border-color: #EAECF0;
     border: 1px solid lightgray;
@@ -81,7 +139,45 @@
     font-size: 18px;
     color: #666666;
   }
+
+  .stats-table2 {
+    width: 10%;
+    border-collapse: collapse;
+  }
+
+/* CSS */
+.definition-box {
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 30%;
+    height: 10px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0px;
+}
+
+h3 {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 137px;
+}
+
+p {
+    width: 359px;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
   
+  
+  /* Media Query for smaller screens */
   @media screen and (max-width: 600px) {
     .description {
       margin-left: 10px;

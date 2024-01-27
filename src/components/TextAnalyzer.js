@@ -3,6 +3,7 @@ import './TextAnalyzer.css'; // Import your CSS file
 
 const TextAnalyzer = () => {
   const [text, setText] = useState('');
+  const [selectedTab, setSelectedTab] = useState('word'); // Added state to manage selected tab
 
   // Function to update the text and calculate metrics
   const handleTextChange = (e) => {
@@ -26,39 +27,99 @@ const TextAnalyzer = () => {
       <p className="description">
         Text Analyzer is a simple free online tool for SEO web content analysis that helps you find most frequent phrases and words, number of characters, words, sentences and paragraphs, and estimated read and speak time of your content.
       </p>
-      <div className="input">
-        <label className='input-label' htmlFor='input-field'>Word Input</label>
-          
-        <textarea
-        id='input-field'
-          className="input-field"
-          placeholder="Type or copy/paste your content here."
-          value={text}
-          onChange={handleTextChange}
-        />
+      <div className='switching'>
+        <div className='switch-used'>
+          <button
+            onClick={() => setSelectedTab('word')}
+            className={`switch1 ${selectedTab === 'word' ? 'selected-tab' : ''}`}
+          >
+            Word Input
+          </button>
+          <button
+            onClick={() => setSelectedTab('paragraph')}
+            className={`switch2 ${selectedTab === 'paragraph' ? 'selected-tab' : ''}`}
+          >
+            Paragraph
+          </button>
+        </div>
+        <div className='temp'></div>
       </div>
-      <div className="stats-table">
-        <table>
-            <tbody>
-            <tr>
-                <td className="stat-label">Characters</td>
-                <td className="stat-label">Words</td>
-                <td className="stat-label">Sentences</td>
-                <td className="stat-label">Paragraphs</td>
-                <td className="stat-label">Spaces</td>
-                <td className="stat-label">Punctuations</td>
-            </tr>
-            <tr>
-                <td className="stat-value">{numberOfCharacters}</td>
-                <td className="stat-value">{numberOfWords}</td>        
-                <td className="stat-value">{numberOfSentences}</td>
-                <td className="stat-value">{numberOfParas}</td>
-                <td className="stat-value">{numberOfSpaces}</td>
-                <td className="stat-value">{numberOfPunctuations}</td>
-            </tr>
-            </tbody>
-        </table>
-      </div>
+      {selectedTab === 'paragraph' && (
+        <>
+          <div className="input">
+            <textarea
+              className="input-field"
+              placeholder="Type or copy/paste your content here."
+              value={text}
+              onChange={handleTextChange}
+            />
+          </div>
+          <div className="stats-table">
+            <table>
+              <tbody>
+                <tr>
+                  <td className="stat-label">Characters</td>
+                  <td className="stat-label">Words</td>
+                  <td className="stat-label">Sentences</td>
+                  <td className="stat-label">Paragraphs</td>
+                  <td className="stat-label">Spaces</td>
+                  <td className="stat-label">Punctuations</td>
+                </tr>
+                <tr>
+                  <td className="stat-value">{numberOfCharacters}</td>
+                  <td className="stat-value">{numberOfWords}</td>
+                  <td className="stat-value">{numberOfSentences}</td>
+                  <td className="stat-value">{numberOfParas}</td>
+                  <td className="stat-value">{numberOfSpaces}</td>
+                  <td className="stat-value">{numberOfPunctuations}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      {selectedTab === 'word' && (
+        <>
+          <div className="input1">
+            <input
+              className="input-field1"
+              value={text}
+              onChange={handleTextChange}
+            />
+            <button className='process'>Process Word</button>
+          </div>
+          <div className="stats-table2">
+            <table>
+              <tbody>
+                <tr>
+                  <td className="stat-label">Characters</td>
+                  <td className="stat-label">Words</td>
+                </tr>
+                <tr>
+                  <td className="stat-value">{numberOfCharacters}</td>
+                  <td className="stat-value">{numberOfWords}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+          <div class="definition-box">
+            <h3>Definition:</h3>
+            <p>in, relating to, or characteristic of a town or city. "the urban population"</p>
+            <h3>Parts of speech:</h3>
+            <p>Noun</p>
+            <h3>Synonyms:</h3>
+            <p>Town</p>
+            <h3>Antonyms:</h3>
+            <p>Rural</p>
+          </div>
+        <div className='switch-used'>
+
+        </div>
+        </div>
+        </>
+      )}
     </div>
   );
 };
