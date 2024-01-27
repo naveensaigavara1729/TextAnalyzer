@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .title {
+    margin-left: 45px;
+    width: 314px;
+    height: 58px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: 0em;
+    color: #475467;
+
+  }
+  
+  .description {
+    width: 1290px;
+    height: 114px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 70px;
+    color: #475467;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667085;
+    width: 90%;
+    text-align: left;
+  }
+  
+  
+  .input-field {
+    width: 90%;
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #D2D6DB;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+  }
+  
+  .input-field::placeholder {
+    color: #999999;
+  }
+
+  .stats-table {
+    margin-left: 70px;
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 95%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border-width: 0px, 0px, 1px, 1px;
+border-style: solid;
+border-color: #EAECF0;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  td {
+    font-size: 18px;
+    color: #666666;
+  }
+  
+  
